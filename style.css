@@ -1,0 +1,98 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+    font-weight: normal;
+}
+
+footer {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: purple;
+    cursor: not-allowed;
+    text-shadow: 1px 1px 2px lightgray;
+}
+
+footer:hover {
+    color: darkblue;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: #282828;
+    background: linear-gradient(-45deg, #23A6D5, cyan, deeppink, #23D5AB);
+    background-size: 400% 400%;
+    animation: Gradient 15s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    box-shadow: 6px 6px 10px lightgray;
+}
+
+.calculator-grid>button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 5px solid lightgray;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
+    margin: 20px solid lightgray;
+    margin: 3px;
+    border-radius: 12%;
+    overflow: hidden;
+}
+
+.calculator-grid>button:hover {
+    background-color: rgba(255, 255, 255, .9);
+    transform: scale(1.1);
+    transition: ease-in 0.1s;
+}
+
+#delKey {
+    background-color: rgb(161, 8, 8);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px 0;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+#previous {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+
+#current {
+    color: white;
+    font-size: 2.5rem;
+}
